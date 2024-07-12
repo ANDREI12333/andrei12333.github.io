@@ -1,0 +1,284 @@
+/* Importando fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Roboto:wght@400;500;700&display=swap');
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos do body */
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    background: #f4f4f4; /* Cor de fundo do body */
+    color: #333; /* Cor da fonte do body */
+    padding-top: 100px; /* Ajuste conforme a altura do cabeçalho */
+    line-height: 1.6;
+}
+
+/* Estilos para parágrafos, listas e itens de lista */
+p, ul, li {
+    font-family: "Roboto", sans-serif;
+    color: #333; /* Cor da fonte dos textos */
+    margin-bottom: 1em;
+}
+
+/* Estilos para os títulos */
+h2 {
+    font-family: "Merriweather", serif;
+    color: #e6033f; /* Cor da fonte dos textos */
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+/* Estilos para a navbar */
+.navbar {
+    display: flex;
+    flex-flow: row wrap;
+    height: 100px;
+    background: #000000;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Garante que o cabeçalho fique acima do conteúdo */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Estilos para o logo */
+.logo {
+    flex: 1;
+    text-align: left;
+    margin-left: 10%;
+}
+
+.logo h1 {
+    font-family: "Merriweather", serif;
+    color: #0d80e4; /* Cor da fonte do logo */
+    font-size: 35px;
+}
+
+/* Estilos para o menu */
+.menu {
+    flex: 2;
+    text-align: right;
+    padding: 20px;
+}
+
+.menu a {
+    color: #0d80e4; /* Cor da fonte dos links do menu */
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 16px;
+    position: relative; /* Necessário para o pseudo-elemento */
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #e6033f; /* Cor da fonte dos links ao passar o mouse */
+}
+
+.menu a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    top: 0;
+    left: 0;
+    background-color: #e6033f; /* Cor da linha */
+    transition: width 0.3s;
+}
+
+.menu a:hover::before {
+    width: 100%;
+}
+
+/* Estilos para a seção de boas-vindas */
+.section-welcome {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 10%;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.welcome-content {
+    max-width: 50%;
+}
+
+.imagem-boas-vindas {
+    max-width: 45%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para o contêiner */
+.container {
+    display: flex;
+    justify-content: space-between; /* Distribui os blocos com espaço igual entre eles */
+    align-items: stretch; /* Alinha os blocos para que todos tenham a mesma altura */
+    padding: 20px 10%;
+    flex-wrap: wrap; /* Permite que os blocos se ajustem em telas menores */
+}
+
+/* Estilos para os blocos */
+.block {
+    background: #0d80e4;
+    border-radius: 20px;
+    padding: 20px;
+    flex: 1; /* Faz com que todos os blocos cresçam igualmente */
+    margin: 10px; /* Espaçamento entre os blocos */
+    color: #ffffff; /* Cor da fonte dos textos nos blocos */
+    font-family: "Roboto", sans-serif;
+    line-height: 1.5;
+    text-align: left;
+    display: flex;
+    flex-direction: column; /* Permite que o conteúdo interno seja organizado em coluna */
+    justify-content: center; /* Centraliza verticalmente o conteúdo */
+    min-height: 300px; /* Define uma altura mínima para os blocos */
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efeito 3D */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.block:hover {
+    transform: translateY(-10px); /* Efeito de elevação */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Efeito de sombra mais intensa */
+}
+
+/* Estilos para o texto dentro dos blocos */
+.block h2, .block p {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.block:hover h2, .block:hover p {
+    opacity: 1;
+}
+
+/* Estilos para a seção de contato */
+.section-contact {
+    text-align: center;
+    padding: 50px 10%;
+    background: #ffffff;
+}
+
+/* Estilos para o rodapé */
+footer {
+    margin-top: 100px;
+    height: 400px;
+    background: #000000;
+    text-align: center;
+    border-top: 5px solid #e6033f;
+}
+
+.logo-rodape {
+    padding: 100px;
+    color: #0d80e4;
+}
+
+.logo-rodape:hover {
+    color: #e6033f;
+}
+
+.link-rodape {
+    color: #e6033f; /* Cor da fonte dos links do rodapé */
+    text-decoration: none; /* Remove o sublinhado dos links */
+}
+
+.link-rodape:hover {
+    color: #e6033f; /* Cor da fonte dos links ao passar o mouse */
+}
+
+.Techfoot {
+    font-family: "Merriweather", serif;
+    color: #0d80e4; /* Cor da fonte do logo no rodapé */
+    font-size: 35px;
+}
+
+/* Media Queries para Responsividade */
+
+/* Telas menores que 768px (tablets e smartphones) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .logo {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .menu {
+        text-align: center;
+        padding: 0;
+    }
+
+    .menu a {
+        display: block;
+        padding: 10px;
+    }
+
+    .section-welcome {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .welcome-content, .imagem-boas-vindas {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .block {
+        margin: 10px 0;
+    }
+}
+
+/* Telas menores que 480px (smartphones) */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 5px;
+    }
+
+    .logo h1 {
+        font-size: 24px;
+    }
+
+    .menu a {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .section-welcome {
+        padding: 10px;
+    }
+
+    .section-contact {
+        padding: 20px;
+    }
+
+    footer {
+        height: auto;
+       padding: 20px;
+    }
+
+    .logo-rodape {
+        padding: 20px;
+    }
+
+    .Techfoot {
+        font-size: 24px;
+    }
+}
